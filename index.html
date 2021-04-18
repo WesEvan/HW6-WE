@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+</head>
+
+<body>
+
+<div class="jumbotron text-center bg-info">
+    <div class="display-4 font-weight-bold">Weather Dashboard</div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <h3>Search for a city: </h3>
+            <form>
+                <input type="city" class="form-control" id="citySearch" placeholder="Enter City Name">
+                <button class="btn btn-primary" onclick="addToSearchHistory(); return false">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+
+        <!--Displaying Search History-->
+            <ul id="searchHistory" class="list-group">
+                <li id="list" type="button" ></li>
+              </ul>
+        </div>
+
+        <!--NTS: Make sure columns are within 12 total to prevent overlapping-->
+
+        <!-- Enter Weather Display Here -->
+        <div class="col-8">
+
+          <div class="row" id="weatherDataCard">
+            <div class="card w-70">
+                <div class="card-body">
+                    <span class="card-title font-weight-bold" id="cityName">City Name</span>
+                    <span class="card-title font-weight-bold" id="todayDate">Today's Date</span>  
+
+                        <!-- Weather Icon Goes here-->
+                    <p class="card-text">
+                        <br>
+                        <span>Temperature: <span id="temp"> </span>&deg;F</span>
+                        <br>
+                        <span>Humidity: <span id="humid"> </span>%</span>
+                        <br>
+                        <span>Wind Speed: <span id="speed"> </span> MPH</span>
+                        <br>
+                        <span>UV Index: <span id="uv"> </span> </span>
+                    </p>
+                </div>
+            </div>
+          </div>
+          <div class="row" id="dailyForecast"></div>
+        </div>
+    </div>
+    </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="assets/js/script.js"></script> <!--NTS: load script.js last or after all libraries have been addressed -->
+
+
+</body>
+</html>
